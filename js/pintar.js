@@ -13,8 +13,13 @@ export const pintar=(productos)=>{
         cardDescription.classList.add("card__description")
         cardDescription.textContent=product.description
         const cardPrice=document.createElement('p')
-        cardPrice.classList.add("card__price")
-        cardPrice.textContent=`$ ${product.price}`
+        if (!product.estado){
+            cardPrice.textContent=`agotado`    
+            cardPrice.classList.add("card__price-agotado")
+        }else{
+            cardPrice.textContent=`$ ${product.price}`
+            cardPrice.classList.add("card__price")
+        }
         cardInfo.append(cardName,cardDescription,cardPrice)
         card.appendChild(cardInfo)
         productContainer.appendChild(card)

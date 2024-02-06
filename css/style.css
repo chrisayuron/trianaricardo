@@ -254,6 +254,13 @@ img{
     background-color: #008000;
 }
 
+.card:hover .card__price-agotado{
+    transition: all 1.5s;
+    color: #fff;
+    border-radius: 0.8rem;
+    background-color: #595e59;
+}
+
 .filtrar{
     display: flex;
     gap: 2rem;
